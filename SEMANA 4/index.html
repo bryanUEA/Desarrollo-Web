@@ -1,0 +1,281 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Mi Sitio Bootstrap</title>
+
+    <!-- Bootstrap 5 (CSS) -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+
+    <!-- CSS personalizado -->
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body>
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark sticky-top shadow-sm">
+      <div class="container">
+        <a class="navbar-brand fw-bold" href="#">MiSitio</a>
+
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#menuPrincipal"
+          aria-controls="menuPrincipal"
+          aria-expanded="false"
+          aria-label="Abrir menú"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="menuPrincipal">
+          <ul class="navbar-nav ms-auto gap-md-2">
+            <li class="nav-item">
+              <a class="nav-link active" href="#inicio">Inicio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#servicios">Sección</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#formulario">Contacto</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- HERO / ENCABEZADO -->
+    <header id="inicio" class="hero text-white">
+      <div class="container py-5">
+        <div class="row align-items-center g-4">
+          <div class="col-lg-7">
+            <h1 class="display-5 fw-bold mb-3">
+              Página Moderna con Bootstrap 5 + CSS3
+            </h1>
+            <p class="lead mb-4">
+              Diseño responsivo con Grid y Flexbox, cards, navbar, formulario,
+              animaciones, transiciones, y componentes interactivos como Collapse.
+            </p>
+
+            <div class="d-flex flex-wrap gap-2">
+              <a class="btn btn-primary btn-lg" href="#servicios">
+                Ver contenido
+              </a>
+
+              <!-- Botón + Collapse -->
+              <button
+                class="btn btn-outline-light btn-lg"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#infoExtra"
+                aria-expanded="false"
+                aria-controls="infoExtra"
+              >
+                Mostrar / Ocultar info
+              </button>
+            </div>
+
+            <div class="collapse mt-3" id="infoExtra">
+              <div class="glass p-3 rounded-4">
+                <strong>Contenido extra (Collapse):</strong>
+                <p class="mb-0">
+                  Este bloque aparece y desaparece con animación gracias a Bootstrap.
+                  Puedes usarlo para mostrar detalles, FAQs, términos, etc.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-5">
+            <div class="hero-card p-3 p-md-4">
+              <img
+                src="assets/img/imagen1.jpg"
+                class="img-fluid rounded-4"
+                alt="Imagen representativa"
+              />
+              <p class="text-white-50 mt-3 mb-0">
+                Imagen en <code>assets/img/imagen1.jpg</code> con <code>img-fluid</code>.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- SECCIÓN PRINCIPAL: GRID 3 COLUMNAS -->
+    <main class="py-5">
+      <section id="servicios" class="container">
+        <div class="d-flex align-items-end justify-content-between flex-wrap gap-2 mb-4">
+          <div>
+            <h2 class="fw-bold mb-1">Sección Principal</h2>
+            <p class="text-secondary mb-0">
+              Grid con 3 columnas (<code>col-md-4</code>) y Cards.
+            </p>
+          </div>
+          <span class="badge text-bg-dark px-3 py-2 rounded-pill">
+            Bootstrap Grid + CSS Hover
+          </span>
+        </div>
+
+        <div class="row g-4">
+          <!-- CARD 1 -->
+          <div class="col-md-4">
+            <article class="card card-hover h-100">
+              <img
+                src="assets/img/imagen1.jpg"
+                class="card-img-top"
+                alt="Imagen card 1"
+              />
+              <div class="card-body">
+                <h3 class="h5 fw-semibold">Diseño Responsivo</h3>
+                <p class="card-text text-secondary">
+                  Se adapta a móvil, tablet y escritorio usando el sistema de Grid
+                  de Bootstrap y media queries personalizadas.
+                </p>
+                <a href="#formulario" class="btn btn-primary w-100">
+                  Contactar
+                </a>
+              </div>
+            </article>
+          </div>
+
+          <!-- CARD 2 -->
+          <div class="col-md-4">
+            <article class="card card-hover h-100">
+              <img
+                src="assets/img/imagen1.jpg"
+                class="card-img-top"
+                alt="Imagen card 2"
+              />
+              <div class="card-body">
+                <h3 class="h5 fw-semibold">Animaciones & Transiciones</h3>
+                <p class="card-text text-secondary">
+                  Efectos hover con <code>transform</code>, sombras suaves y
+                  transiciones para una experiencia moderna.
+                </p>
+                <button
+                  class="btn btn-primary w-100"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#detalle2"
+                  aria-expanded="false"
+                  aria-controls="detalle2"
+                >
+                  Ver detalle
+                </button>
+
+                <div class="collapse mt-3" id="detalle2">
+                  <div class="alert alert-light mb-0">
+                    Tip: combina <strong>transition</strong> + <strong>transform</strong>
+                    para micro-interacciones.
+                  </div>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <!-- CARD 3 -->
+          <div class="col-md-4">
+            <article class="card card-hover h-100">
+              <img
+                src="assets/img/imagen1.jpg"
+                class="card-img-top"
+                alt="Imagen card 3"
+              />
+              <div class="card-body">
+                <h3 class="h5 fw-semibold">Bootstrap + CSS Externo</h3>
+                <p class="card-text text-secondary">
+                  Se sobreescriben estilos (ej. <code>.btn-primary</code>) y se agrega
+                  una media query propia para pantallas pequeñas.
+                </p>
+                <a class="btn btn-primary w-100" href="#inicio">
+                  Volver arriba
+                </a>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- FORMULARIO -->
+      <section id="formulario" class="container mt-5">
+        <div class="form-wrap p-4 p-md-5">
+          <h2 class="fw-bold mb-2">Formulario de Contacto</h2>
+          <p class="text-secondary mb-4">
+            Campos: Nombre, Email, Comentarios. Totalmente responsivo.
+          </p>
+
+          <form class="row g-3">
+            <div class="col-md-6 form-group">
+              <label for="nombre" class="form-label">Nombre</label>
+              <input
+                type="text"
+                class="form-control"
+                id="nombre"
+                placeholder="Ej: Bryan Simbaña"
+                required
+              />
+            </div>
+
+            <div class="col-md-6 form-group">
+              <label for="email" class="form-label">Email</label>
+              <input
+                type="email"
+                class="form-control"
+                id="email"
+                placeholder="ejemplo@correo.com"
+                required
+              />
+            </div>
+
+            <div class="col-12 form-group">
+              <label for="comentarios" class="form-label">Comentarios</label>
+              <textarea
+                class="form-control"
+                id="comentarios"
+                rows="4"
+                placeholder="Escribe tu mensaje..."
+                required
+              ></textarea>
+            </div>
+
+            <div class="col-12 d-flex flex-wrap gap-2">
+              <button type="submit" class="btn btn-primary btn-lg">
+                Enviar
+              </button>
+              <button type="reset" class="btn btn-outline-secondary btn-lg">
+                Limpiar
+              </button>
+            </div>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="text-center bg-light py-4">
+      <div class="container">
+        <p class="mb-2 fw-semibold">© 2025 Mi Sitio Bootstrap</p>
+        <div class="d-flex justify-content-center gap-3 flex-wrap">
+          <a href="#" class="footer-link">Términos</a>
+          <a href="#" class="footer-link">Privacidad</a>
+          <a href="#" class="footer-link">Soporte</a>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Bootstrap 5 (JS) -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
