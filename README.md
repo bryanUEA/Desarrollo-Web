@@ -31,13 +31,3 @@ Aplicación web hecha con **HTML + CSS + JavaScript** que permite:
 - Eventos: `click`, `input`, `keydown`
 - CSS Grid + estilos para selección
 
-## Publicación en GitHub Pages
-1. Sube el proyecto a GitHub.
-2. Ve a **Settings → Pages**.
-3. En **Build and deployment**:
-   - Source: **Deploy from a branch**
-   - Branch: **main** (o master) y carpeta **/(root)**
-4. Guarda y espera a que se genere el link.
-
-> Tu sitio quedará disponible en una URL similar a:
-> https://TU_USUARIO.github.io/NOMBRE_REPO/
