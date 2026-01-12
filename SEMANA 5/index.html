@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Galería Interactiva - Semana 5</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body>
+    <header class="topbar">
+      <div class="container">
+        <h1>Galería de Imágenes Interactiva</h1>
+        <p class="subtitle">
+          Agrega imágenes por URL, selecciona con clic, elimina la seleccionada y usa atajos.
+        </p>
+      </div>
+    </header>
+
+    <main class="container">
+      <section class="panel">
+        <div class="controls">
+          <label class="label" for="imageUrl">URL de la imagen</label>
+
+          <div class="row">
+            <input
+              id="imageUrl"
+              type="url"
+              placeholder="https://example.com/imagen.jpg"
+              autocomplete="off"
+              spellcheck="false"
+            />
+            <button id="addBtn" class="btn primary" disabled>Agregar imagen</button>
+          </div>
+
+          <div class="row row-actions">
+            <button id="deleteBtn" class="btn danger" disabled>
+              Eliminar imagen seleccionada
+            </button>
+
+            <div class="help">
+              <strong>Atajos:</strong>
+              <span><kbd>Enter</kbd> Agregar</span>
+              <span><kbd>Del</kbd> / <kbd>Backspace</kbd> Eliminar</span>
+              <span><kbd>Esc</kbd> Deseleccionar</span>
+            </div>
+          </div>
+
+          <p id="msg" class="msg" aria-live="polite"></p>
+        </div>
+      </section>
+
+      <section class="panel">
+        <h2 class="section-title">Galería</h2>
+
+        <!-- Contenedor de la galería -->
+        <div id="gallery" class="gallery" aria-label="Galería de imágenes"></div>
+
+        <p class="hint">
+         
+        </p>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <small>Semana 5 • JavaScript (DOM + Eventos) • GitHub Pages</small>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
